@@ -46,12 +46,28 @@
   <section id="contacto">
     <h2>Contacto</h2>
     <p>Correo: <a href="mailto:juanperez@email.com">juanperez@email.com</a></p>
-    <p>GitHub: <a href="https://github.com/juanperez" target="_blank">juanperez</a></p>
+    <p>GitHub: <a href="https://github.com/juanperez" target="_blank" onclick="enviarEvento(event)">juanperez</a></p>
     <p>LinkedIn: <a href="https://linkedin.com/in/juanperez" target="_blank">juanperez</a></p>
   </section>
 
   <footer>
     <p>&copy; 2025 Juan Pérez</p>
   </footer>
+
+  <script>
+    function enviarEvento(e){
+        e.preventDefault();
+
+        gtag('event','link',{
+            'debug_mode': true,
+            'event_category': 'rrss',
+            'event_label': 'github'
+        });
+
+        setTimeout(function(){
+            window.location.href = e.target.href;
+        }, 300);
+    }
+  </script>
 </body>
 </html>
