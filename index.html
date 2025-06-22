@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portafolio - Juan Pérez</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LKRK1B7TRK"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-LKRK1B7TRK');
-    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-53CSJ3FZ');</script>
+    <!-- End Google Tag Manager -->
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53CSJ3FZ"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <header>
     <h1>Juan Pérez</h1>
     <p>Desarrollador Web Frontend</p>
@@ -46,7 +48,7 @@
   <section id="contacto">
     <h2>Contacto</h2>
     <p>Correo: <a href="mailto:juanperez@email.com">juanperez@email.com</a></p>
-    <p>GitHub: <a href="https://github.com/juanperez" target="_blank" onclick="enviarEvento(event)">juanperez</a></p>
+    <p>GitHub: <a href="https://github.com/juanperez" target="_blank" id="btn-github">juanperez</a></p>
     <p>LinkedIn: <a href="https://linkedin.com/in/juanperez" target="_blank">juanperez</a></p>
   </section>
 
@@ -54,20 +56,5 @@
     <p>&copy; 2025 Juan Pérez</p>
   </footer>
 
-  <script>
-    function enviarEvento(e){
-        e.preventDefault();
-
-        gtag('event','link',{
-            'debug_mode': true,
-            'event_category': 'rrss',
-            'event_label': 'github'
-        });
-
-        setTimeout(function(){
-            window.location.href = e.target.href;
-        }, 300);
-    }
-  </script>
 </body>
 </html>
